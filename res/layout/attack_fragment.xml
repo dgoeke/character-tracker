@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayoutAttack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="15dip" >
+
+    <Button
+        android:id="@+id/buttonHitPlus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextHitBonus"
+        android:layout_alignRight="@+id/listViewAttacks"
+        android:layout_alignTop="@+id/editTextHitBonus"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:onClick="onButtonHitPlus"
+        android:text="+" />
+
+    <EditText
+        android:id="@+id/editTextHitBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/buttonHitPlus"
+        android:ems="2"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/buttonHitMinus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonHitPlus"
+        android:layout_alignTop="@+id/editTextHitBonus"
+        android:layout_toLeftOf="@+id/editTextHitBonus"
+        android:onClick="onButtonHitMinus"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/textViewHitBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonHitPlus"
+        android:layout_alignBottom="@+id/buttonHitPlus"
+        android:layout_toLeftOf="@+id/buttonHitMinus"
+        android:text="Hit Bonus:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/buttonDmgPlus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextDmgBonus"
+        android:layout_alignRight="@+id/buttonHitPlus"
+        android:layout_alignTop="@+id/editTextDmgBonus"
+        android:onClick="onButtonDmgPlus"
+        android:text="+" />
+
+    <EditText
+        android:id="@+id/editTextDmgBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextHitBonus"
+        android:layout_toLeftOf="@+id/buttonDmgPlus"
+        android:ems="2"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/buttonDmgMinus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonDmgPlus"
+        android:layout_alignTop="@+id/editTextDmgBonus"
+        android:layout_toLeftOf="@+id/editTextDmgBonus"
+        android:onClick="onButtonDmgMinus"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/textViewDmgBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonDmgPlus"
+        android:layout_alignBottom="@+id/buttonDmgPlus"
+        android:layout_toLeftOf="@+id/buttonDmgMinus"
+        android:text="Damage Bonus:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextD6Bonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextDmgBonus"
+        android:layout_toLeftOf="@+id/buttonD6Plus"
+        android:ems="2"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/buttonD6Minus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextD6Bonus"
+        android:layout_alignTop="@+id/editTextD6Bonus"
+        android:layout_toLeftOf="@+id/editTextD6Bonus"
+        android:onClick="onButtonD6Minus"
+        android:text="-" />
+    
+    <Button
+        android:id="@+id/buttonD6Plus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextD6Bonus"
+        android:layout_alignRight="@+id/buttonDmgPlus"
+        android:layout_alignTop="@+id/editTextD6Bonus"
+        android:onClick="onButtonD6Plus"
+        android:text="+" />
+    
+    <TextView
+        android:id="@+id/textViewD6Bonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextD6Bonus"
+        android:layout_alignBottom="@+id/editTextD6Bonus"
+        android:layout_toLeftOf="@+id/buttonD6Minus"
+        android:text="Bonus D6:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <ListView
+        android:id="@+id/listViewItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonD6Plus" >
+
+        <requestFocus />
+    </ListView>
+    
+</RelativeLayout>

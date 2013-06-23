@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Character Tracker</string>
+    <string name="title_section_attack">Attack</string>
+    <string name="title_section_dice">Dice</string>
+    <string name="title_section_character">Character</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string-array name="hp_modify_type">
+        <item >Damage</item>
+        <item >Healing</item>
+    </string-array>
+
+</resources>
